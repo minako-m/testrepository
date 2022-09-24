@@ -14,14 +14,13 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         String text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer iaculis nisl lacinia sapien dictum tristique. Sed at sagittis justo, id tincidunt risus. Aenean at diam ullamcorper, varius sapien a, fringilla orci. Duis ac dolor lorem. Sed ultrices malesuada vehicula. Sed blandit enim quis libero consectetur euismod. Morbi pharetra magna dolor, sed vulputate nunc fringilla vitae.";
-        Scanner my = new Scanner(System.in);
+        Scanner inputScanner = new Scanner(System.in);
         System.out.println("Task: ");
-        String task = my.nextLine();
-        System.out.println(task + task);
+        String task = inputScanner.nextLine();
+        System.out.println("Task: " + task);
 
         Command c = new SimpleCommand(task);
 
-//        c.addArgument("text", new SimpleArgument(text));
         c.addArgument("text", new FileArgument("./file.txt"));
 
         List<Operation> operations = List.of(
