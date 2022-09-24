@@ -22,7 +22,8 @@ public class SimpleCommand extends AbstractCommand implements Command {
     }
 
     public String getAttributeAsString(String name) throws ValueNotFoundException {
-        return arguments.get(name).getAsString();
+        return arguments.get(name)
+                .getAsString();
     }
 
     @Override
